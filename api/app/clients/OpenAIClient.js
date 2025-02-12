@@ -167,7 +167,7 @@ class OpenAIClient extends BaseClient {
         this.options.endpointType ?? this.options.endpoint,
         this.options.endpointTokenConfig,
       ) ??
-      4095; // 1 less than maximum
+      65535; // 1 less than maximum
 
     if (this.shouldSummarize) {
       this.maxContextTokens = Math.floor(this.maxContextTokens / 2);
